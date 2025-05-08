@@ -1,13 +1,18 @@
 "use client";
 
+const Titulo = () => <h1>React - Conceitos básicos</h1>;
+
+const SubTitulo = () => (<h2>Lista de tarefas</h2>);
+
+const Cabecalho = () => (
+  <>
+    <Titulo />
+    <SubTitulo />
+  </>
+)
+
 const Home = () => {
-  return (
-    <div>
-      <main>
-        <h1>React - conceitos básicos</h1>
-      </main>
-    </div>
-  );
+  return <Cabecalho />;
 }
 
 export default Home;
