@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 const Titulo = () => (
 	<h1 className="text-2xl font-bold mb-1">React - Conceitos básicos</h1>
@@ -36,13 +36,10 @@ const Tarefa: React.FC<TarefaProps> = ({ titulo, concluido }) => {
 	const escutarClique = () => {
 		console.log(`A tarefa '${titulo}' foi clicada!`);
 		setEstaConcluido(!estaConcluido);
-	}
+	};
 
 	return (
-		<div
-			className={classe}
-			onClick={() => escutarClique()}
-		>
+		<div className={classe} onClick={() => escutarClique()}>
 			<h3 className="text-xl font-bold">{titulo}</h3>
 			<p className="text-sm">{estaConcluido ? "Concluída" : "Pendente"}</p>
 		</div>
